@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+div#root {
+  display: grid;
+  justify-content: center;
+}
+.banner {
+  display: grid;
+  height: 95vh;
+  width: 98vw;
+  background-color: #008380;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.text{
+  position: absolute;
+  top: 50%;
+  right: 50%;
+ 
+}
+
+.course-img {
+  contain: content;
+  width: 100%;
+  display: flex;
+  height: 15em;
+  position: relative;
+  top: 0em;
+}
+.dats-course {
+  display: grid;
+  justify-content: center;
+  margin: 1em;
+}
+.money {
+  text-align: center;
+  border: 1px solid #008380;
+  width: 51%;
+  margin: auto;
+  padding: .6em;
+  background-color: #008381d7;
+  cursor: pointer;
+  color: #fff;
+}
+.money:hover{
+  background-color: #00838180;
+  color: #e84e1b;
+}
+.money:active{
+  border: 1px solid #e84e1b;
+}
+.grid-course {
+  display: grid;
+  margin: 1em;
+}
+.perfil-tacher {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  align-items: center;
+}
+.teacher {
+  background: rgb(34, 141, 127);
+  border-radius: 50%;
+  border: none;
+  width: 2em;
+  height: 2em;
+  margin: 1em;
+}
+.nameteacher {
+  font-size: 14px;
+  text-align: left;
+  margin-left: 1.2em;
+}
+.teacher {
+  background: red;
+  border-radius: 50%;
+  border: none;
+  width: 2em;
+  height: 2em;
+}
+.course-title {
+  text-align: center;
+  font-size: 18px;
+  margin-left: .5em;
+}
+.list-course {
+  margin: 1em;
+}
+@media (min-width: 719px){
+  .list-course{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
+//Form
+.form-content {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  .form{
+    color: #088b89cb;
+    display: grid;
+    border: 1px solid #00a09a;
+    padding: .5em;
+    margin: 1em;
+    &__title{
+      text-align: center;
+      color: #008381de;
+    }
+    &-content__input{
+      display: grid;
+      grid-gap: .3em;
+    }
+   input[type="submit"]{
+      position: relative;
+      top: .5em;
+   }
+   &__input:focus{
+    border: 1px solid #03b1ab;
+    box-shadow: inset -3px -4px 5px 0px;
+    color: #03b1ab;
+    font-size: 14px;
+   }
+  }
+}
