@@ -6,7 +6,8 @@ class Form extends Component {
 
     state = {
         "name":"",
-        "email":""
+        "email":"",
+        "fecha":new Date()
     }
     
     onChange = e => {
@@ -15,6 +16,12 @@ class Form extends Component {
            [e.target.name]:e.target.value
    
        }) 
+    }
+
+    cambiarFecha = ()=>{
+        this.setState({
+            fecha:new Date()
+        })
     }
         
     
@@ -49,6 +56,7 @@ class Form extends Component {
             </div>
             <div className="user">
                 <h2 className="user__title">{`Hello ${this.state.name}`}</h2>
+                <h3>Your taim is:{Math.ceil(this.state.fecha/1000)}</h3>
                 <p className="user__emial">{`Your email is ${this.state.email}`}</p>
             </div>
             </>
@@ -56,15 +64,15 @@ class Form extends Component {
     }
 
     componentDidMount(){
-       console.log(document.getElementById('form'))
+       this.intervalFecha = setInterval(()=>{
+            this.cambiarFecha()
+            console.log(new Date())
+       },1000)
     }
     componentDidUpdate(prevProps,prevState){
-        console.log(prevProps)
-        console.log(prevState)
-        console.log('---------')
-
-
-
+        //console.log(prevProps)
+        //console.log(prevState)
+        //console.log('---------')
     }
 }
 

@@ -1,54 +1,22 @@
 import React, { Component } from 'react'
 import './styles/App.scss'
+import images from './images/course1.JPG'
 //images
 import imgbanner from './images/DSC_0119.JPG'
-import logo from './images/course1.JPG'
+
 //components
 import Banner from './components/Banner'
 import Course from './components/Course'
 import Form from './components/Form'
-//array from Courses
-const Courses = [
-    {
-        "title":"HTML5 Basic",
-        "teacher":"Milton Estrada",
-        "price":"Gratis",
-        "img":logo
-    },
-    {
-        "title":"CSS3 Basic",
-        "teacher":"Milton Estrada",
-        "price":"Gratis",
-        "img":logo
-    },
-    {
-        "title":"Javascript Basic",
-        "teacher":"Milton Estrada",
-        "price":"Gratis",
-        "img":logo
-    },
-    {
-        "title":"HTML5 Avanzado",
-        "teacher":"Milton Estrada",
-        "price":10,
-        "img":logo
-    },
-    {
-        "title":"CSS3 Animation",
-        "teacher":"Milton Estrada",
-        "price":15,
-        "img":logo
-    },
-    {
-        "title":"Javascript Avanzado",
-        "teacher":"Milton Estrada",
-        "price":20,
-        "img":logo
-    },
-]
+
+//json
+import Courses from './database/Courses.json'
+//array from Courses 
 
 class Apjx extends Component {
-
+    state={
+        Courses:Courses
+    }
     render() {
         return (
             <>
@@ -56,7 +24,7 @@ class Apjx extends Component {
             <Form title="User"/>
             <div className="list-course">
                 {
-                    Courses.map(course=><Course title={course.title} teacher={course.teacher} price={course.price} img={course.img} />)
+                   this.state.Courses.map(course=><Course title={course.title} teacher={course.teacher} price={course.price} img={images} />)
                 }
             </div>
           </>
