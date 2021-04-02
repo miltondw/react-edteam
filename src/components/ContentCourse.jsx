@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Courses from '../database/Courses.json'
 import course2 from '../images/course2.png'
+import Error404 from './Error404'
 class ContentCourse extends Component {
 
     render( props ) {
@@ -14,7 +15,7 @@ class ContentCourse extends Component {
             }
         }
         return (
-            <div className="Course-description">
+            CurseActual ? <div className="Course-description">
                  <img className="course-img" src={course2} alt={CurseActual.title}/>
                   <div className="dats-course">
                   <h1 className="course-title">{CurseActual.title}</h1>
@@ -30,7 +31,8 @@ class ContentCourse extends Component {
                             </span>
                         </div>                  
               </div> 
-            </div>
+            </div>:<Error404/>
+
         );
     }
 }
