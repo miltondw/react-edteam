@@ -20,7 +20,7 @@ class Course extends Component {
         return (
             
             <div className="grid-course">
-                    <img className="course-img" src={this.props.img} alt=""/>
+                    <img className="course-img" src={this.props.img} alt={this.props.title}/>
                 {
                   premium(user.Premium) ? <div className="premium">
                   <div className="dats-course">

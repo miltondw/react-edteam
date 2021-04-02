@@ -2,33 +2,45 @@
 [
     
     {
+        "id":1,
         "title":"HTML5 Basic",
         "teacher":"Milton Estrada",
-        "price":"Gratis"
+        "price":"Gratis",
+        "img":"../images/course1.png"
     },
     {
+        "id":2,
         "title":"CSS3 Basic",
         "teacher":"Milton Estrada",
-        "price":"Gratis"
+        "price":"Gratis",
+        "img":"../images/course2.png"
     },
     {
+        "id":3,
         "title":"Javascript Basic",
         "teacher":"Milton Estrada",
-        "price":"Gratis"
+        "price":"Gratis",
+        "img":"../images/course3.png"
     },
     {
+        "id":4,
         "title":"HTML5 Avanzado",
         "teacher":"Milton Estrada",
-        "price":10
+        "price":10,
+        "img":"../images/course4.png"
     },
     {
+        "id":5,
         "title":"CSS3 Animation",
         "teacher":"Milton Estrada",
-        "price":15
+        "price":15,
+        "img":"../images/course5.png"
     },
     {
+        "id":6,
         "title":"Javascript Avanzado",
         "teacher":"Milton Estrada",
-        "price":20
+        "price":20,
+        "img":"../images/course6.png"
     }
 ]

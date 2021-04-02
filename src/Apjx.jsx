@@ -1,34 +1,33 @@
 import React, { Component } from 'react'
+import {
+    BrowserRouter as Router, Route, Switch
+  } from "react-router-dom";
 import './styles/App.scss'
-import images from './images/course1.JPG'
 //images
-import imgbanner from './images/DSC_0119.JPG'
+import imgbanner from './images/banner.webp'
+
 
 //components
 import Banner from './components/Banner'
-import Course from './components/Course'
-import Form from './components/Form'
-
-//json
-import Courses from './database/Courses.json'
-//array from Courses 
-
+import CourseGrid from './components/CourseGrid'
+import Form from './components/Form';
+import ContentCourse from './components/ContentCourse'
+// import NoMatch from './components/NoMatch'
+ 
 class Apjx extends Component {
-    state={
-        Courses:Courses
-    }
-    render() {
+
+    render() { 
         return (
-            <>
-            <Banner img={imgbanner} title="learning whit theres" paragragh="Your future from less "/>
-            <Form title="User"/>
-            <div className="list-course">
-                {
-                   this.state.Courses.map(course=><Course title={course.title} teacher={course.teacher} price={course.price} img={images} />)
-                }
-            </div>
-          </>
-        );
+            <Router>
+                <Switch>
+                    <Route path="/" exact component={()=><Banner title="Donde Empiezan todas las ideas" paragragh="No vale soñar si no ejecutas" img={imgbanner} />}/>
+                    <Route path="/cursos/:id" component={ContentCourse}/>
+                    <Route path="/cursos" component={CourseGrid}/>
+                    <Route path="/formulario" component={()=><Form title="Pide tu futuro ya!" />}/>
+                    <Route component={()=><Banner title="¿Te perdiste?" paragragh="No importa perder el camino , sino seguir!" img={imgbanner} />} />
+                </Switch>
+            </Router>
+        )
     }
 }
 

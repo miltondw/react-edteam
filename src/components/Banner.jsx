@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 class Banner extends Component {
+
     render(props) {
         return (
             <div className="banner">
@@ -8,7 +9,7 @@ class Banner extends Component {
                     <h1 className="banner__title">{this.props.title}</h1>
                     <p className="banner__paragrah">{this.props.paragragh}</p>
                 </div>
-               <img className="banner" src={this.props.img} alt=""/>
+               <img className="banner" src={this.props.img} alt={this.props.title}/>
             </div>
         );
     }
