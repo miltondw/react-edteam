@@ -21,6 +21,42 @@ div#root {
   right: 50%;
  
 }
+// Menu
+
+.nav__content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  .home-logo{
+    width: 50px;
+    img{
+      width: 100%;
+    }
+  }
+  .nav{
+    height: 70px;
+    ul{
+    height: inherit;
+      list-style: none;
+      display: flex;
+      li{
+    height: inherit;
+    margin: 0 .6em;
+        a{
+    height: inherit;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #007370;  
+  }
+  .active{
+    color: #e84e1b;
+  }
+      }
+    }
+  }
+}
 
 .course-img {
   contain: content;
