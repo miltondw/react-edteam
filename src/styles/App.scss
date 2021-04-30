@@ -3,8 +3,7 @@
   padding: 0;
 }
 div#root {
-  display: grid;
-  justify-content: center;
+  padding: 1em;
 }
 .banner {
   display: grid;
@@ -15,44 +14,43 @@ div#root {
   align-items: center;
   color: #008380;
 }
-.text{
+.text {
   position: absolute;
   top: 50%;
   right: 50%;
- 
 }
 // Menu
 
-.nav__content{
+.nav__content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 70px;
-  .home-logo{
+  .home-logo {
     width: 50px;
-    img{
+    img {
       width: 100%;
     }
   }
-  .nav{
+  .nav {
     height: 70px;
-    ul{
-    height: inherit;
+    ul {
+      height: inherit;
       list-style: none;
       display: flex;
-      li{
-    height: inherit;
-    margin: 0 .6em;
-        a{
-    height: inherit;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #007370;  
-  }
-  .active{
-    color: #e84e1b;
-  }
+      li {
+        height: inherit;
+        margin: 0 0.6em;
+        a {
+          height: inherit;
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          color: #007370;
+        }
+        .active {
+          color: #e84e1b;
+        }
       }
     }
   }
@@ -76,16 +74,16 @@ div#root {
   border: 1px solid #008380;
   width: 51%;
   margin: auto;
-  padding: .6em;
+  padding: 0.6em;
   background-color: #008381d7;
   cursor: pointer;
   color: #fff;
 }
-.money:hover{
+.money:hover {
   background-color: #00838180;
   color: #e84e1b;
 }
-.money:active{
+.money:active {
   border: 1px solid #e84e1b;
 }
 .grid-course {
@@ -120,15 +118,15 @@ div#root {
 .course-title {
   text-align: center;
   font-size: 18px;
-  margin-left: .5em;
+  margin-left: 0.5em;
 }
 .list-course {
   margin: 1em;
 }
-@media (min-width: 719px){
-  .list-course{
+@media (min-width: 719px) {
+  .list-course {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -137,29 +135,60 @@ div#root {
   display: grid;
   justify-content: center;
   align-items: center;
-  .form{
+  .form {
     color: #088b89cb;
     display: grid;
     border: 1px solid #00a09a;
-    padding: .5em;
+    padding: 0.5em;
     margin: 1em;
-    &__title{
+    &__title {
       text-align: center;
       color: #008381de;
     }
-    &-content__input{
+    &-content__input {
       display: grid;
-      grid-gap: .3em;
+      grid-gap: 0.3em;
     }
-   input[type="submit"]{
+    input[type="submit"] {
       position: relative;
-      top: .5em;
-   }
-   &__input:focus{
-    border: 1px solid #03b1ab;
-    box-shadow: inset -3px -4px 5px 0px;
-    color: #03b1ab;
-    font-size: 14px;
-   }
+      top: 0.5em;
+    }
+    &__input:focus {
+      border: 1px solid #03b1ab;
+      box-shadow: inset -3px -4px 5px 0px;
+      color: #03b1ab;
+      font-size: 14px;
+    }
+  }
+}
+
+//Users
+.card-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 1em 4em;
+  margin: 1em 4em;
+  grid-gap: 2em;
+  &__title {
+    grid-column: 1/-1;
+    text-align: center;
+  }
+  &__users:hover {
+    box-shadow: 2px -1px 16px 1px;
+  }
+  &__users {
+    background: #00838021;
+    color: #1b1919;
+    border: 1px solid #ccc;
+    padding: 2em;
+    display: grid;
+    justify-content: center;
+    h1 {
+      text-align: center;
+      padding: 0.5em;
+    }
+    p {
+      padding: 0.5em;
+    }
   }
 }

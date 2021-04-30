@@ -21,6 +21,11 @@ class MainMenu extends Component {
               </NavLink>
             </li>
             <li>
+              <NavLink to="/users" activeClassName="active">
+                users
+              </NavLink>
+            </li>
+            <li>
               <NavLink to="/formulario" activeClassName="active">
                 Form
               </NavLink>
